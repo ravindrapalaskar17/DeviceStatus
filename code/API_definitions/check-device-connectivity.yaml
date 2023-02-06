@@ -30,7 +30,7 @@ servers:
         description: Base path for Device Connectivity API
 tags:
   - name: Device Connectivity Status
-    description: Operations to validate device connectivity status
+    description: Operations to validate device connectivity status and Country information.
 paths:
    /status:
     post:
@@ -99,10 +99,16 @@ components:
           $ref: "#/components/schemas/ConnectivityEventType"
         eventStatus:
           $ref: "#/components/schemas/EventStatusType"
+        countryCode:
+          $ref: "#/components/schemas/CountryCode"
+        countryName:
+          $ref: "#/components/schemas/CountryName"  
       required:
         - ueId
         - eventType
         - eventStatus
+        - countryCode
+        - countryName
     UeId:
       description: User equipment identifier
       type: object
@@ -158,6 +164,10 @@ components:
       enum:
         - ROAMING_ON
         - ROAMING_OFF
+    CountryCode:
+      type: string
+    CountryName:
+      type: string
     RequestStatus:
       type: object
       properties:
