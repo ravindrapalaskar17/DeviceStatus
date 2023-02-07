@@ -165,9 +165,13 @@ components:
         - ROAMING_ON
         - ROAMING_OFF
     CountryCode:
+      description: The country code as an identifier for the country and the dependent areas.
       type: string
+      example: "49"
     CountryName:
+      description: The ISO Code of the country.
       type: string
+      example: "DE"
     RequestStatus:
       type: object
       properties:
