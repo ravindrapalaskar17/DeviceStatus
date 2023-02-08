@@ -165,9 +165,9 @@ components:
         - ROAMING_ON
         - ROAMING_OFF
     CountryCode:
-      description: The country calling code as an identifier for the country and the dependent areas.
-      type: string
-      example: "49"
+      description: The mobile country code (MCC) as an identifier for the geographic region of country and the dependent areas.
+      type: integer
+      example: 262
     CountryName:
       description: The ISO Code of the country.
       type: string
