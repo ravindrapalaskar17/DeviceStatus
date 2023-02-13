@@ -8,7 +8,7 @@ info:
   license:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
-  version: 0.2.1
+  version: 0.3.0
 externalDocs:
   description: Product documentation at CAMARA
   url: https://github.com/camaraproject/
@@ -106,9 +106,7 @@ components:
       required:
         - ueId
         - eventType
-        - eventStatus
-        - countryCode
-        - countryName
+        - eventStatus       
     UeId:
       description: User equipment identifier
       type: object
@@ -165,13 +163,15 @@ components:
         - ROAMING_ON
         - ROAMING_OFF
     CountryCode:
-      description: The mobile country code (MCC) as an identifier for the geographic region of country and the dependent areas.
+      description: The Mobile country code (MCC) as an geographic region identifier for the country and the dependent areas.
       type: integer
-      example: 262
+      example: 340
     CountryName:
-      description: The ISO Code of the country.
-      type: string
-      example: "DE"
+     description: The ISO 3166 ALPHA-2 code of the country.
+      type: array
+      items:
+         $ref: "#/components/schemas/CountryName"
+      example: [BL,GF,GP,MF,MQ]
     RequestStatus:
       type: object
       properties:
