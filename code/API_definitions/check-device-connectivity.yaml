@@ -106,7 +106,7 @@ components:
       required:
         - ueId
         - eventType
-        - eventStatus       
+        - eventStatus
     UeId:
       description: User equipment identifier
       type: object
