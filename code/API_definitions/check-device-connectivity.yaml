@@ -167,11 +167,11 @@ components:
       type: integer
       example: 340
     CountryName:
-     description: The ISO 3166 ALPHA-2 code of the country.
-      type: array
-      items:
-         $ref: "#/components/schemas/CountryName"
-      example: [BL,GF,GP,MF,MQ]
+     description: A list of ISO 3166 ALPHA-2 country-codes of mapped to the mobile country code (MCC).
+     type: array
+     items:
+        type: string
+     example: [BL,GF,GP,MF,MQ]
     RequestStatus:
       type: object
       properties:
