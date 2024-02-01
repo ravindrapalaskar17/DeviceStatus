@@ -44,7 +44,7 @@ rules:
   oas3-parameter-description: false
   oas3-schema: true
   oas3-server-not-example.com: false
-  oas3-server-trailing-slash: true
+  oas3-server-trailing-slash: false
   oas3-unused-component: true
   oas3-valid-media-example: true
   oas3-valid-schema-example: true
